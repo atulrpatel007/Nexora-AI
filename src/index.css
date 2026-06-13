@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@theme{
+  --color-primary: #041016;
+  --color-secondary: #22DDF4;
+  /* #00f2ff; */
+  --color-accent: #06b6d4;
+}
+*{
+  font-family: "Baloo Bhai 2", sans-serif;
+}
+.hero-bg {
+  background-color: #041016;
+
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(34,221,244,0.15), transparent 25%),
+    radial-gradient(circle at 80% 30%, rgba(34,221,244,0.12), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(6,182,212,0.08), transparent 40%),
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+
+  background-size:
+    auto,
+    auto,
+    auto,
+    80px 80px,
+    80px 80px;
+
+  background-position:
+    center,
+    center,
+    center,
+    center,
+    center;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
